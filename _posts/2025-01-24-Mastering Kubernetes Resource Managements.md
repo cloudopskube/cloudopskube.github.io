@@ -3,7 +3,7 @@ title: Understanding Resource Management in Kubernetes - A Deep Dive
 date: 2025-01-24 00:00:00
 categories: [Container, Kubernetes]
 tags: [Container, Kubernetes, DevOps]
-author: Rakhil Pilachrey
+author: rakhil_pilachrey
 ---
 
 # Understanding Resource Management in Kubernetes: A Deep Dive

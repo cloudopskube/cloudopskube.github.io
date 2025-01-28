@@ -1,10 +1,9 @@
 ---
 title: "Implementing Workload Identity Federation with Terraform and Kubernetes"
 date: 2025-01-27
-author: "Cloud Architecture Team"
+author: rakhil_pilachrey
 categories: [Azure, Security, DevOps, Terraform, Kubernetes]
 tags: [Azure, Security, Kubernetes, Azure DevOps, Identity Federation, Terraform]
-author: Rakhil Pilachrey
 ---
 
 # Implementing Workload Identity Federation with Terraform and Kubernetes
