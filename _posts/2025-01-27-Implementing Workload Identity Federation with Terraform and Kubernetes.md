@@ -12,7 +12,7 @@ tags: [Azure, Security, Kubernetes, Azure DevOps, Identity Federation, Terraform
 - [Introduction](#introduction)
 - [What is Workload Identity Federation?](#what-is-workload-identity-federation)
 - [Key Benefits Over Traditional Service Principals](#key-benefits-over-traditional-service-principals)
-- [Implementation Deep Dive](#implementation-Deep-Dive)
+- [Implementation Deep Dive](#implementation-deep-dive)
 - [Best Practices](#best-practices)
 - [Real-World Examples](#real-world-examples)
 
