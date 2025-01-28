@@ -71,20 +71,19 @@ provider "azuread" {}
 
 ### Terraform Configuration
 
-1. **Create Azure AD Application**
+1. **Create User Assigned Managed Identity**
 
 ```hcl
-# azure_ad_app.tf
-resource "azuread_application" "k8s_workload" {
-  display_name = "k8s-workload-app"
+#uami.tf
+resource "azurerm_resource_group" "this" {
+  name     = "rg-uami-dev-we-01"
+  location = "West Europe"
 }
-
-resource "azuread_service_principal" "k8s_workload" {
-  application_id = azuread_application.k8s_workload.application_id
+resource "azurerm_user_assigned_identity" "this" {
+  location            = azurerm_resource_group.this.location
+  name                = "id-uami-dev-we-01"
+  resource_group_name = azurerm_resource_group.this.name
 }
-
-data "azurerm_subscription" "current" {}
-data "azurerm_client_config" "current" {}
 ```
 
 2. **Configure Federated Identity**
@@ -92,12 +91,12 @@ data "azurerm_client_config" "current" {}
 ```hcl
 # federated_identity.tf
 resource "azuread_application_federated_identity_credential" "k8s_federated" {
-  application_object_id = azuread_application.k8s_workload.object_id
-  display_name         = "kubernetes-federated-identity"
-  description          = "Federated identity for Kubernetes workload"
-  audiences           = ["api://AzureADTokenExchange"]
-  issuer              = "https://kubernetes.default.svc.cluster.local"
-  subject             = "system:serviceaccount:default:workload-identity-sa"
+  application_object_id = azurerm_user_assigned_identity.this.object_id
+  display_name          = "kubernetes-federated-identity"
+  description           = "Federated identity for Kubernetes workload"
+  audiences             = ["api://AzureADTokenExchange"]
+  issuer                = "https://kubernetes.default.svc.cluster.local"
+  subject               = "system:serviceaccount:default:workload-identity-sa"
 }
 ```
 
@@ -160,7 +159,7 @@ resource "azuread_application_federated_identity_credential" "azdo_federated" {
 
 ### 1. Security Best Practices
 
-- Implement Least Privilege Access
+- Implement Least Privilege Access based the the requirment.
 
 ```hcl
 # roles.tf
@@ -173,7 +172,7 @@ resource "azurerm_role_assignment" "minimal_access" {
 
 ### 2. Monitoring Setup
 
-- Regular Audit and Review
+- Regular Audit and Review. Below example shows how to retain the signin logs for an entra service principal. we can use similar configuration for managed identities as well. 
 
 ```hcl
 # monitoring.tf
