@@ -6,8 +6,6 @@ tags: [Container, Kubernetes, DevOps]
 author: rakhil_pilachrey
 ---
 
-# Understanding Resource Management in Kubernetes: A Deep Dive
-
 Resource management in Kubernetes is a fundamental concept that can make or break your application's performance and stability. In this comprehensive guide, we'll explore how Kubernetes handles resource allocation and provides mechanisms to ensure optimal utilization of cluster resources.
 
 ## Introduction
@@ -131,5 +129,4 @@ Proper resource management in Kubernetes is essential for:
 ## References
 
 - [Kubernetes Official Documentation](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)
-- [Cloud Native Computing Foundation](https://www.cncf.io/)
 - [Kubernetes Resource Management Guide](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)

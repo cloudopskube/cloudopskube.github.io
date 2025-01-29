@@ -6,8 +6,6 @@ categories: [Azure, Security, DevOps, Terraform, Kubernetes]
 tags: [Azure, Security, Kubernetes, Azure DevOps, Identity Federation, Terraform]
 ---
 
-# Implementing Workload Identity Federation with Terraform and Kubernetes
-
 ## Table of Contents
 - [Introduction](#introduction)
 - [What is Workload Identity Federation?](#what-is-workload-identity-federation)
@@ -264,6 +262,6 @@ The implementation might seem complex at first, but the long-term benefits in te
 
 ## References
 
-- [Azure Active Directory Documentation](https://docs.microsoft.com/azure/active-directory/)
-- [Terraform Azure Provider](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
-- [Kubernetes Documentation](https://kubernetes.io/docs/)
+- [Workload identity federation](https://learn.microsoft.com/en-us/entra/workload-id/workload-identity-federation)
+- [Introduction to Azure DevOps Workload identity federation (OIDC) with Terraform](https://devblogs.microsoft.com/devops/introduction-to-azure-devops-workload-identity-federation-oidc-with-terraform/)
+- [azuread_application_federated_identity_credential  ](https://registry.terraform.io/providers/hashicorp/azuread/latest/docs/resources/application_federated_identity_credential)
