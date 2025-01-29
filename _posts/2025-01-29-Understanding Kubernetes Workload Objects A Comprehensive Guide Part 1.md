@@ -11,8 +11,7 @@ author: rakhil_pilachrey
 - [Pods](#pods)
 - [ReplicaSets](#replicasets)
 - [Deployments](#deployments)
-- [DaemonSets](#daemonSets)
-- [Real-World Examples](#real-world-examples)
+- [DaemonSets](#daemonsets)
 
 
 ## Introduction
