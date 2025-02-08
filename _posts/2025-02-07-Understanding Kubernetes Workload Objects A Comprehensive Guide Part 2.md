@@ -225,7 +225,7 @@ Understanding Kubernetes workload objects is crucial for effective container orc
   - Jobs: Run-to-completion tasks
   - CronJobs: Scheduled tasks
 
-## Best Practices:
+## Best Practices
 
   - Always use version control for YAML configurations
   - Implement resource requests and limits
