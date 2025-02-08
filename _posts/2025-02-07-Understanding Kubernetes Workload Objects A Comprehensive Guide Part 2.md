@@ -12,12 +12,12 @@ author: rakhil_pilachrey
 - [Jobs](#jobs)
 - [CronJobs](#cronjobs)
 - [Conclusion](#conclusion)
-- [Best Practices](#bestpractices)
+- [BestPractices](#bestpractices)
 
 
 ## Introduction
 
-This is a Two part serise blog you can read the first part [here]('2025-01-29-Understanding Kubernetes Workload Objects A Comprehensive Guide Part 1.md') for a detailed understadning on Pods, Replica Sets, Deployments and DaemonSets.
+This is a Two part serise blog you can read the first part [here](https://cloudopskube.github.io/posts/Understanding-Kubernetes-Workload-Objects-A-Comprehensive-Guide-Part-1/) for a detailed understadning on Pods, Replica Sets, Deployments and DaemonSets.
 
 ## StatefulSets
 
@@ -225,7 +225,7 @@ Understanding Kubernetes workload objects is crucial for effective container orc
   - Jobs: Run-to-completion tasks
   - CronJobs: Scheduled tasks
 
-## Best Practices
+## BestPractices
 
   - Always use version control for YAML configurations
   - Implement resource requests and limits
